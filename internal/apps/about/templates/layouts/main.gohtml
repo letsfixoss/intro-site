@@ -9,12 +9,10 @@
 </head>
 <body class="h-screen antialiased leading-none font-sans pb-16">
 {{partial "layouts/csrf"}}
-{{ partial "layouts/header" }}
 
 <div id="content" hx-boost="true" hx-target="#content" hx-swap="innerHTML">
     {{ yield }}
 </div>
 
-{{ partial "layouts/footer"}}
 </body>
 </html>

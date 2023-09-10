@@ -1,5 +1,8 @@
   version: 3
   tasks:
+    default:
+      cmds:
+        - task --list-all
     dev:
       deps:
         - air
@@ -17,3 +20,7 @@
     deploy:flyio:
       cmds:
         - flyctl deploy
+    watch:about:
+      desc: Watch the "about" assets, rebuilding them as changes occur.
+      cmds:
+        - npm run watch:about
