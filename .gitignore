@@ -1,0 +1,6 @@
+.env
+node_modules
+internal/apps/*/assets/css/main.css
+bin
+.idea
+tmp
