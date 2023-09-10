@@ -4,14 +4,13 @@ import (
 	"chia-goths/internal"
 	"chia-goths/internal/apps"
 	"chia-goths/internal/apps/about"
-	"chia-goths/internal/apps/devdit"
-	"chia-goths/internal/apps/todos"
 	"fmt"
+	"net/http"
+	"os"
+
 	"github.com/gorilla/csrf"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
-	"net/http"
-	"os"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
@@ -31,12 +30,6 @@ func main() {
 
 	main := apps.NewAppConfig(c, "/apps/about")
 	main.InitApp(&about.App{})
-
-	devditConfig := apps.NewAppConfig(c, "/apps/devdit")
-	devditConfig.InitApp(&devdit.App{})
-
-	todosConfig := apps.NewAppConfig(c, "/apps/todos")
-	todosConfig.InitApp(&todos.App{})
 
 	c.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/apps/about", http.StatusFound)
