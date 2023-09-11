@@ -5,7 +5,7 @@ In the world of open-source software (OSS), innovation knows no bounds. Countles
 As the demand for open-source solutions continues to soar, the financial support required to maintain and expand these projects often falls short. In response to this challenge, I propose a visionary solution: a flexible, user-driven, flat-rate subscription model. This model empowers individuals to choose the projects they want to support, pooling resources in a way that ensures the long-term vitality of OSS.
 
 ## User-Centric Fund Allocation
-At the core of our mission is a profound belief in the wisdom and autonomy of our users. I do not aim to be the arbiters of where your contributions should go; instead, I seek to put the power of choice firmly in your hands. 
+At the core of our mission is a belief in the wisdom and autonomy of the users. I do not aim to be the arbiter of where your contributions should go; instead, I seek to put the power of choice firmly in your hands. 
 
 Your subscription is not just a financial commitment; it is a statement of your priorities and values within the open-source community. You know best which OSS projects have touched your life, solved your problems, or inspired your work.  
 
@@ -30,3 +30,9 @@ These are some of the questions we should aim to explore and answer as we embark
 
 ## Wrapping up
 Let's work together and delve into the heart of this transformative mission, striving to bridge the financing gap, foster a sense of community, and pave the way for a more sustainable and inclusive future for open-source software. Together, we can turn the power of collective contributions into a force for lasting change.
+
+Join the discussion:
+- On [Github](https://github.com/orgs/letsfixoss/discussions)
+- On [X](https://twitter.com/i/communities/1701034526913237368/)
+
+Reach me on X @ [HowardL3](https://twitter.com/HowardL3). 
