@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply styles to the entire #article container */
+#article {
+  @apply max-w-3xl mx-auto p-6;
+}
+
+/* Customize heading styles */
+#article h1 {
+  @apply text-3xl font-bold text-primary mb-4; /* Using primary color */
+}
+
+#article h2 {
+  @apply text-2xl font-bold text-secondary mb-3; /* Using secondary color */
+}
+
+#article h3 {
+  @apply text-xl font-bold text-accent mb-3; /* Using accent color */
+}
+
+#article h4 {
+  @apply text-lg font-bold text-neutral mb-3; /* Using neutral color */
+}
+
+#article h5 {
+  @apply text-base font-bold text-base-100 mb-2; /* Using base-100 color */
+}
+
+#article h6 {
+  @apply text-sm font-bold text-base-200 mb-2; /* Using base-200 color */
+}
+
+/* Apply styles to common Markdown elements */
+#article p {
+  @apply text-base-content mb-4; /* Using base-content color for text */
+}
+
+#article ul,
+#article ol {
+  @apply mb-4 pl-6;
+}
+
+#article ul {
+  @apply list-disc; /* Use discs for unordered lists */
+}
+
+#article ol {
+  @apply list-decimal; /* Use numbers for ordered lists */
+}
+
+#article ul li,
+#article ol li {
+  @apply mb-2;
+}
+
+#article a {
+  @apply text-info hover:underline; /* Using info color for links */
+}
+
+#article strong,
+#article b {
+  @apply font-bold;
+}
+
+#article em,
+#article i {
+  @apply italic;
+}
+
+

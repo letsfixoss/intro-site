@@ -6,6 +6,9 @@ import (
 	"net/http"
 
 	"github.com/Masterminds/sprig/v3"
+	"github.com/gomarkdown/markdown"
+	"github.com/gomarkdown/markdown/html"
+	"github.com/gomarkdown/markdown/parser"
 	"github.com/gorilla/csrf"
 	"github.com/rs/zerolog/log"
 	"github.com/unrolled/render"
@@ -54,6 +57,9 @@ func (renderer *Renderer) getInstance() *render.Render {
 						}
 						return renderer.ConstantData[key]
 					},
+					"markdown": func(md []byte) template.HTML {
+						return template.HTML(mdToHTML(md))
+					},
 				},
 				renderer.Functions,
 				sprig.FuncMap(),
@@ -82,4 +88,18 @@ func (renderer *Renderer) RenderHTML(r *http.Request, w http.ResponseWriter, tem
 	htmlOpts = append(htmlOpts)
 
 	return renderer.getInstance().HTML(w, http.StatusOK, templateName, data, htmlOpts...)
+}
+
+func mdToHTML(md []byte) []byte {
+	// create markdown parser with extensions
+	extensions := parser.CommonExtensions | parser.AutoHeadingIDs | parser.NoEmptyLineBeforeBlock
+	p := parser.NewWithExtensions(extensions)
+	doc := p.Parse(md)
+
+	// create HTML renderer with extensions
+	htmlFlags := html.CommonFlags | html.HrefTargetBlank
+	opts := html.RendererOptions{Flags: htmlFlags}
+	renderer := html.NewRenderer(opts)
+
+	return markdown.Render(doc, renderer)
 }
