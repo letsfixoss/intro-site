@@ -1,7 +1,12 @@
+# fly.toml app configuration file generated for letsfixoss on 2023-09-10T21:54:11-03:00
+#
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-app = "chia-goths"
+app = "letsfixoss"
 primary_region = "gig"
+
+[build]
 
 [env]
   LISTEN_ADDR = "0.0.0.0:8080"
